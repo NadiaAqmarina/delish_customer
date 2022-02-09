@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'kosong_pesanan.dart' as kosong;
-import 'menunggu_pesanan.dart' as menunggu;
+// import 'menunggu_pesanan.dart' as menunggu;
+import 'dikonfirmasi_pesanan.dart' as dikonfirmasi;
+import 'disiapkan_pesanan.dart' as disiapkan;
+import 'dikirim_pesanan.dart' as dikirim;
+import 'selesai_pesanan.dart' as selesai;
+import 'dibatalkan_pesanan.dart' as dibatalkan;
 
 class TabPesanan extends StatefulWidget {
   const TabPesanan({Key? key}) : super(key: key);
@@ -20,17 +25,15 @@ class _TabPesananState extends State<TabPesanan> {
             shadowColor: Color.fromRGBO(222, 222, 222, 0.36),
             backgroundColor: Colors.white,
             elevation: 2.5,
-            title: Text('Pesanan',
-                style: TextStyle(color: Colors.black, fontSize: 20)),
+            title:
+                Text('Pesanan', style: Theme.of(context).textTheme.headline6),
             bottom: TabBar(
                 indicatorWeight: 2.0,
-                labelStyle:
-                    TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                labelStyle: Theme.of(context).textTheme.subtitle2,
                 labelColor: Colors.black,
                 labelPadding: EdgeInsets.all(16),
                 unselectedLabelColor: Colors.black38,
-                unselectedLabelStyle:
-                    TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                unselectedLabelStyle: Theme.of(context).textTheme.bodyText2,
                 isScrollable: true,
                 indicatorColor: Colors.amber[900],
                 tabs: [
@@ -52,11 +55,11 @@ class _TabPesananState extends State<TabPesanan> {
           body: TabBarView(
             children: [
               kosong.KosongPesanan(),
-              menunggu.MenungguPesanan(),
-              kosong.KosongPesanan(),
-              kosong.KosongPesanan(),
-              kosong.KosongPesanan(),
-              kosong.KosongPesanan(),
+              dikonfirmasi.DikonfirmasiPesanan(),
+              disiapkan.DisiapkanPesanan(),
+              dikirim.DikirimPesanan(),
+              selesai.SelesaiPesanan(),
+              dibatalkan.DibatalkanPesanan(),
             ],
           ),
         ));

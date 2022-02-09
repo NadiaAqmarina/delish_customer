@@ -1,4 +1,4 @@
-import 'package:delish_customer/tab_pesanan.dart';
+import 'pages/tab_pesanan.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Delish Customer',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

@@ -11,6 +11,7 @@ class _KosongPesananState extends State<KosongPesanan> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(color: Colors.white),
       child: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -22,7 +23,14 @@ class _KosongPesananState extends State<KosongPesanan> {
               height: 100,
             ),
             Padding(padding: EdgeInsets.only(top: 16.0)),
-            Text('Belum ada pesanan'),
+            Text(
+              'Belum ada pesanan.',
+              style: TextStyle(
+                  fontFamily: 'Manrope',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Color.fromRGBO(33, 33, 33, 0.6)),
+            ),
           ],
         ),
       ),
