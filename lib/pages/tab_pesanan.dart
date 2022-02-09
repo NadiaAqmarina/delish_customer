@@ -1,3 +1,4 @@
+import 'package:delish_customer/pages/search.dart';
 import 'package:flutter/material.dart';
 import 'kosong_pesanan.dart' as kosong;
 // import 'menunggu_pesanan.dart' as menunggu;
@@ -25,8 +26,13 @@ class _TabPesananState extends State<TabPesanan> {
             shadowColor: Color.fromRGBO(222, 222, 222, 0.36),
             backgroundColor: Colors.white,
             elevation: 2.5,
-            title:
+            automaticallyImplyLeading: false,
+            title: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
                 Text('Pesanan', style: Theme.of(context).textTheme.headline6),
+              ],
+            ),
             bottom: TabBar(
                 indicatorWeight: 2.0,
                 labelStyle: Theme.of(context).textTheme.subtitle2,
@@ -46,7 +52,11 @@ class _TabPesananState extends State<TabPesanan> {
                 ]),
             actions: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Search();
+                  }));
+                },
                 icon: Icon(Icons.search_rounded),
                 color: Colors.amber[900],
               )
